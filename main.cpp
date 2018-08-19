@@ -8,7 +8,7 @@ int GetInputLimit();
 int main(int argc, char const *argv[])
 {
     unsigned int limit {0};
-    cout << "Sommes des nombres divisible par 3 et 5" << endl;
+    cout << "Sum of natural numbers divisible by either 3 or 5" << endl;
     limit = GetInputLimit();
 
     //Calculation
@@ -22,7 +22,7 @@ int main(int argc, char const *argv[])
         }
     }
     cout << endl;
-    cout << "Sum of natural number divisible by either 3 or 5 : " << total << endl;
+    cout << "Sum of natural numbers divisible by either 3 or 5 : " << total << endl;
 
     cout << "Press any key to continue... " << endl;
     getch();
@@ -32,13 +32,13 @@ int main(int argc, char const *argv[])
 int GetInputLimit()
 {
     int retVal {0};
-    cout << "Veuillez inscrire la limite : ";
+    cout << "Enter a limit (integer) : ";
     
     while(!(cin >> retVal))
     {
         cin.clear();
         while (cin.get() != '\n') continue;
-        cout << "Nombre invalide. Veuillez recommencer : ";
+        cout << "Invalid number. Please try again : ";
     }
     return retVal;
 }
